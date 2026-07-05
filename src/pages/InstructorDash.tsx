@@ -43,7 +43,7 @@ const InstructorDash = () => {
   const updateCourse = async () => {
     setLoading(true)
     try {
-      await axios.put(`http://localhost:5005/api/courses/${editId}`, {
+      await axios.put(`https://learnwithme-app-be-3.onrender.com/api/courses/${editId}`, {
         title: editForm.newTitle,
         price: editForm.newPrice,
         thumbnail: image,
@@ -114,7 +114,7 @@ const InstructorDash = () => {
   const deleteCourse = async (id: string) => {
     setLoading(true)
     try {
-      await axios.delete(`http://localhost:5005/api/courses/${id}`, { headers: { Authorization: `Bearer ${token}` } })
+      await axios.delete(`https://learnwithme-app-be-3.onrender.com/api/courses/${id}`, { headers: { Authorization: `Bearer ${token}` } })
       setCourses(courses.filter((c) => c._id !== id))
       setLoading(false)
     } catch (error) {
@@ -144,7 +144,7 @@ const InstructorDash = () => {
   const handlePublish = async (id: string) => {
     setLoading(true)
     try {
-      const res = await axios.put(`http://localhost:5005/api/courses/publish/${id}`, {}, {
+      const res = await axios.put(`https://learnwithme-app-be-3.onrender.com/api/courses/publish/${id}`, {}, {
         'headers': { 'Authorization': `Bearer ${token}` }
       })
       if (res.data.course) {

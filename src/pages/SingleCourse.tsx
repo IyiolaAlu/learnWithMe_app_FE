@@ -21,7 +21,7 @@ const SingleCourse = () => {
         if (!id) return
         const fetchCourse = async () => {
             try {
-                const res = await axios.get(`http://localhost:5005/api/courses/${id}`, {
+                const res = await axios.get(`https://learnwithme-app-be-3.onrender.com/api/courses/${id}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 })
                 console.log('course data:', res.data)  // 👈 add this
@@ -41,7 +41,7 @@ const SingleCourse = () => {
         if (!isEnrolled || !id) return
         const fetchEnrollmentStatus = async () => {
             try {
-                const res = await axios.get(`http://localhost:5005/api/enroll/status/${id}`, {
+                const res = await axios.get(`https://learnwithme-app-be-3.onrender.com/api/enroll/status/${id}`, {
                     headers: { Authorization: `Bearer ${token}` }
                 })
                 setProgress(res.data.progress)
@@ -56,7 +56,7 @@ const SingleCourse = () => {
     const handleComplete = async () => {
         try {
             await axios.put(
-                `http://localhost:5005/api/enroll/complete/${id}`,
+                `https://learnwithme-app-be-3.onrender.com/api/enroll/complete/${id}`,
                 {},
                 { headers: { Authorization: `Bearer ${token}` } }
             )
