@@ -118,7 +118,8 @@ const InstructorDash = () => {
       setCourses(courses.filter((c) => c._id !== id))
       setLoading(false)
     } catch (error) {
-      setError('Something went wrong')
+      if (axios.isAxiosError(error)) { setError(error.response?.data?.message) }
+      else { setError('Something went wrong') }
       setLoading(false)
     }
   }
@@ -131,10 +132,11 @@ const InstructorDash = () => {
         setInstructorCourse(res.data)
         setToken(token)
         setLoading(false)
-      } catch (error) {
-        setError('Something went wrong')
-        setLoading(false)
-      }
+      }catch (error) {
+      if (axios.isAxiosError(error)) { setError(error.response?.data?.message) }
+      else { setError('Something went wrong') }
+      setLoading(false)
+    }
     }
     fetchCourse()
   }, [])
@@ -149,9 +151,9 @@ const InstructorDash = () => {
         setPublish(true)
       }
     } catch (error) {
-      setError(error.response?.data?.message || 'Something went wrong');
-    } finally {
-      setLoading(false); // Single place for loading state
+      if (axios.isAxiosError(error)) { setError(error.response?.data?.message) }
+      else { setError('Something went wrong') }
+      setLoading(false)
     }
   }
 
