@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+/* ── Navbar ── */
+.navbar-custom {
+  background-color: rgba(26, 26, 26, 0.95) !important;
+  backdrop-filter: blur(12px);
+  padding: 0.85rem 1.5rem;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.3s ease;
+  height: 72px;
+}
+
+/* ── Fix pages going under navbar ── */
+body {
+  padding-top: 72px;
+}
+
+.navbar-custom .navbar-brand {
+  font-family: 'Fraunces', serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #ffffff !important;
+  letter-spacing: -0.02em;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.navbar-custom .navbar-brand:hover {
+  color: #86efac !important;
+}
+
+.navbar-custom .navbar-brand span {
+  color: #059669;
+}
+
+.navbar-custom .navbar-toggler {
+  border: none;
+  padding: 0.4rem 0.6rem;
+}
+
+.navbar-custom .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.navbar-custom .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-custom .nav-link {
+  color: rgba(255, 255, 255, 0.75) !important;
+  font-size: 0.9rem;
+  font-weight: 400;
+  padding: 0.5rem 1rem !important;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  font-family: 'Outfit', sans-serif;
+}
+
+.navbar-custom .nav-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.navbar-custom .nav-link.active {
+  color: #86efac !important;
+  background-color: rgba(5, 150, 105, 0.12);
+}
+
+/* ── Auth Buttons ── */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.auth-link {
+  color: rgba(255, 255, 255, 0.7) !important;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.auth-link:hover {
+  color: #ffffff !important;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.auth-btn-primary {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: #ffffff !important;
+  text-decoration: none;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  padding: 0.55rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  display: inline-block;
+}
+
+.auth-btn-primary:hover {
+  background: linear-gradient(135deg, #047857, #065f46);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(5, 150, 105, 0.35);
+  color: #ffffff !important;
+}
+
+/* ── Logout button ── */
+.navbar-custom .logout-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.75) !important;
+  padding: 0.45rem 1rem;
+  border-radius: 8px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.navbar-custom .logout-btn:hover {
+  background: rgba(239, 68, 68, 0.15);
+  border-color: rgba(239, 68, 68, 0.3);
+  color: #ef4444 !important;
+}
+
+/* ── Responsive ── */
+@media (max-width: 992px) {
+  .navbar-custom {
+    padding: 0.65rem 1rem;
+    height: auto;
+  }
+
+  body {
+    padding-top: 68px;
+  }
+
+  .navbar-custom .navbar-nav {
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    padding-bottom: 0.5rem;
+  }
+
+  .auth-buttons {
+    margin-top: 0.75rem;
+    flex-wrap: wrap;
+    padding-bottom: 0.5rem;
+  }
+
+  .auth-btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    padding-top: 62px;
+  }
+
+  .navbar-custom .navbar-brand {
+    font-size: 1.1rem;
+  }
+
+  .auth-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .auth-link {
+    width: 100%;
+    text-align: center;
+  }
+}

@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Fraunces:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+.sc-page {
+  font-family: 'Outfit', sans-serif;
+  background-color: #fafaf9;
+  min-height: 100vh;
+}
+
+.sc-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  font-family: 'Outfit', sans-serif;
+  font-size: 15px;
+  color: #6b7280;
+}
+
+/* ── Hero ── */
+.sc-hero {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  padding: 4rem 3rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 100%;
+}
+
+.sc-hero-content {
+  flex: 1;
+  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sc-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #9ca3af;
+  margin: 0;
+}
+
+.sc-title {
+  font-family: 'Fraunces', serif;
+  font-size: clamp(28px, 4vw, 48px);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.sc-description {
+  font-size: 15px;
+  font-weight: 300;
+  color: #d1d5db;
+  line-height: 1.7;
+  margin: 0;
+}
+
+.sc-meta {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.sc-meta-item {
+  font-size: 13px;
+  font-weight: 400;
+  color: #9ca3af;
+}
+
+.sc-price {
+  font-family: 'Fraunces', serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0;
+}
+
+.sc-hero-image {
+  flex: 0 0 400px;
+  height: 260px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.sc-hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ── Body ── */
+.sc-body {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.sc-section-block {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sc-section-title {
+  font-family: 'Fraunces', serif;
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+  padding-bottom: 0.75rem;
+  border-bottom: 2px solid #f3f4f6;
+}
+
+/* ── Includes ── */
+.sc-includes {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.sc-include-item {
+  font-size: 14px;
+  font-weight: 400;
+  color: #374151;
+  padding: 0.75rem 1rem;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #f3f4f6;
+}
+
+/* ── Curriculum ── */
+.sc-curriculum {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.sc-section {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.sc-section-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background-color: #f9fafb;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: 'Outfit', sans-serif;
+}
+
+.sc-section-header:hover {
+  background-color: #f3f4f6;
+}
+
+.sc-section-name {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.sc-section-number {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.sc-section-toggle {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+/* ── Lessons ── */
+.sc-lessons {
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid #e5e7eb;
+}
+
+.sc-lesson {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.875rem 1.25rem;
+  text-decoration: none;
+  color: #374151;
+  font-size: 14px;
+  font-weight: 400;
+  border-bottom: 1px solid #f3f4f6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.sc-lesson:last-child {
+  border-bottom: none;
+}
+
+.sc-lesson:hover {
+  background-color: #f9fafb;
+  color: #1a1a1a;
+}
+
+.sc-lesson-icon {
+  font-size: 10px;
+  color: #9ca3af;
+  flex-shrink: 0;
+}
+
+.sc-lesson-title {
+  flex: 1;
+}
+
+/* ── Instructor ── */
+.sc-instructor {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 1.5rem;
+  background-color: #f9fafb;
+  border-radius: 12px;
+  border: 1px solid #f3f4f6;
+}
+
+.sc-instructor-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #1a1a1a;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-family: 'Fraunces', serif;
+}
+
+.sc-instructor-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 4px;
+}
+
+.sc-instructor-info p {
+  font-size: 13px;
+  color: #6b7280;
+  margin: 0;
+}
+
+.sc-enroll-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  background-color: #ffffff;
+  color: #1a1a1a;
+  border: none;
+  border-radius: 999px;
+  padding: 14px 28px;
+  cursor: pointer;
+  margin-top: 0.5rem;
+  width: fit-content;
+  transition: background-color 0.25s ease, transform 0.2s ease;
+}
+
+.sc-enroll-btn:hover {
+  background-color: #f3f4f6;
+  transform: translateY(-1px);
+}
+
+.sc-enrolled-badge {
+  font-size: 14px;
+  color: #d1fae5;
+  margin: 0.5rem 0 0;
+}
+
+.sc-locked {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f9fafb;
+  border-radius: 10px;
+  border: 1px dashed #e5e7eb;
+  color: #6b7280;
+  font-size: 15px;
+}
+.sc-progress-block {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sc-progress-bar-container {
+  width: 100%;
+  max-width: 300px;
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.sc-progress-bar {
+  height: 100%;
+  background-color: #ffffff;
+  border-radius: 999px;
+  transition: width 0.4s ease;
+}
+
+.sc-progress-text {
+  font-size: 13px;
+  color: #d1d5db;
+  margin: 0;
+}
+.sc-complete-btn {
+  font-family: 'Outfit', sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  background-color: #ecfdf5;
+  color: #059669;
+  border: 1px solid #a7f3d0;
+  border-radius: 8px;
+  padding: 10px 16px;
+  cursor: pointer;
+  margin: 0.75rem 1.25rem;
+  transition: background-color 0.2s ease;
+  width: calc(100% - 2.5rem);
+}
+
+.sc-complete-btn:hover {
+  background-color: #d1fae5;
+}
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .sc-hero {
+    flex-direction: column;
+    padding: 2.5rem 1.5rem;
+    gap: 2rem;
+  }
+
+  .sc-hero-image {
+    flex: none;
+    width: 100%;
+    height: 200px;
+  }
+
+  .sc-body {
+    padding: 2rem 1.25rem;
+  }
+
+  .sc-includes {
+    grid-template-columns: 1fr;
+  }
+
+  .sc-meta {
+    gap: 0.75rem;
+  }
+}
