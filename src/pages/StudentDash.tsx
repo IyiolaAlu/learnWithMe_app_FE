@@ -32,7 +32,7 @@ const StudentDash = () => {
     const fetchEnrolled = async () => {
       setLoading(true)
       try {
-        const res = await axios.get('http://localhost:5005/api/enroll', {
+        const res = await axios.get('https://learnwithme-app-be-3.onrender.com/api/enroll', {
           headers: { Authorization: `Bearer ${token}` }
         })
         setEnrolledCourse(res.data)

@@ -91,7 +91,7 @@ const InstructorDash = () => {
     e.preventDefault()
     setLoading(true)
     try {
-      const res = await axios.post('http://localhost:5005/api/courses', {
+      const res = await axios.post('https://learnwithme-app-be-3.onrender.com/api/courses', {
         title: form.title, price: form.price,
         description: form.description, thumbnail: image, sections: form.sections
       }, { headers: { Authorization: `Bearer ${token}` } })
@@ -128,7 +128,7 @@ const InstructorDash = () => {
     const fetchCourse = async () => {
       setLoading(true)
       try {
-        const res = await axios.get('http://localhost:5005/api/courses/mycourses', { headers: { Authorization: `Bearer ${token}` } })
+        const res = await axios.get('https://learnwithme-app-be-3.onrender.com/api/courses/mycourses', { headers: { Authorization: `Bearer ${token}` } })
         setInstructorCourse(res.data)
         setToken(token)
         setLoading(false)

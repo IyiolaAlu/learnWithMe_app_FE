@@ -28,7 +28,7 @@ const Courses = () => {
     try {
       // Step 1 — create order on your backend
       const orderRes = await axios.post(
-        'http://localhost:5005/api/payment/create-order',
+        'https://learnwithme-app-be-3.onrender.com/api/payment/create-order',
         { courseId: courseId },
         { headers: { Authorization: `Bearer ${token}` } }
       )
@@ -52,7 +52,7 @@ const Courses = () => {
           try {
             // send payment details to backend to verify
             await axios.post(
-              'http://localhost:5005/api/payment/verify',
+              'https://learnwithme-app-be-3.onrender.com/api/payment/verify',
               {
                 razorpayOrderId: response.razorpay_order_id,
                 razorpayPaymentId: response.razorpay_payment_id,

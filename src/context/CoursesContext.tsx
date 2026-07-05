@@ -71,7 +71,7 @@ export const CoursesContext = ({ children }: ContextProps) => {
         const fetchCourses = async () => {
             setLoading(true)
             try {
-                const res = await axios.get('http://localhost:5005/api/courses')
+                const res = await axios.get('https://learnwithme-app-be-3.onrender.com/api/courses')
                 console.log(res.data);
                 if (res) {
                     setCourses(res.data)
@@ -92,7 +92,7 @@ export const CoursesContext = ({ children }: ContextProps) => {
     const refetchCourses = async () => {
         setLoading(true);
         try {
-            const res = await axios.get('http://localhost:5005/api/courses');
+            const res = await axios.get('https://learnwithme-app-be-3.onrender.com/api/courses');
             setCourses(res.data);
         } catch (error) {
             setError('Failed to fetch courses');

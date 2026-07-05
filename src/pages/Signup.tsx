@@ -22,7 +22,7 @@ const Signup = () => {
         const formData = new FormData()
         formData.append('image', file)
         try {
-            const res = await axios.post('http://localhost:5005/api/upload/upload', formData, {
+            const res = await axios.post('https://learnwithme-app-be-3.onrender.com/api/upload/upload', formData, {
                 headers: { 'Content-Type': 'multipart/form-data' }
             })
             setImage(res.data.url)
@@ -37,7 +37,7 @@ const Signup = () => {
         e.preventDefault()
         try {
             setLoading(true)
-            const res = await axios.post('http://localhost:5005/api/users/signup', {
+            const res = await axios.post('https://learnwithme-app-be-3.onrender.com/api/users/signup', {
                 firstName: form.firstName, lastName: form.lastName,
                 email: form.email, password: form.password,
                 role: form.role, profileImage: image
